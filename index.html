@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Cita Previa Sanitaria · Sede 2.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Solicita una cita previa en su centro de salud en tres pasos: identificación, especialidad y confirmación. Servicio de Salud, Sede 2.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/estilos.css">
+  </head>
+  <body>
+    <header class="cabecera">
+      <nav class="navbar navbar-dark py-3" aria-label="Cabecera">
+        <div class="container">
+          <span class="navbar-brand mb-0">
+            <strong>Sede 2.0</strong> 
+            Servicio de Salud
+          </span>
+          <span class="brand-sub">
+            Cita previa en atención primaria
+          </span>
+          </div>
+      </nav>
+    </header>
+        <main class="py-4 py-lg-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-8">
+                <h1 class="mb-2">Solicitud de cita previa</h1>
+                <p class="fs-5 text-secondary mb-4">Completa los 3 pasos</p>
+              <nav aria-label="lista-pasos">
+              <ol class="lista-pasos">
+                <li>Itentificación</li>
+                <li>Cita y especialidad</li>
+                <li>Confirmación</li>
+              </ol>
+            </nav>
+            <div class="card shadow-sw">
+              <div class="card-body p-4 p-md-5">
+                <form>
+                  <section id="paso-1" aria-labelledby="paso-1-titulo">
+                    <h2 id="paso-1-titulo" class="h4 fw-bold mb-1" tabindex="-1">Paso 1 · Identificación</h2>
+                    <p class="text-secondary mb-4">Necesitamos saber quién solicita la cita</p>
+                    <div class="mb-4">
+                      <label for="dni" class="form-label">DNI O NIE <span class="req" aria-hidden="true">*</span></label>
+                      <input  type="text" class="form-control form-control-lg" id="dni" name="dni"
+                              maxlength="10" autocomplete="off" spellcheck="false"
+                              aria-describedby="dni-help" required>
+                      <div class="form-text" id="dni-help">
+                        Escribelo sin espacios: <code>12345678A</code> o si eres extranjero, <code>X1234567L</code>.
+                      </div>
+                      <p class="field-error" id="err-dni" hidden></p>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12 col-md-6 mb-4">
+                        <label for="nombre" class="form-label">Nombre <samp class="req" aria-hidden="true">*</samp></label>
+                        <input type="text" class="form-control form-control-lg" id="nombre" name="nombre"
+                        autocomplete="given-name" required>
+                      </div>
+                      <div class="col-12 col-md-6 mb-4">
+                        <label for="apellido1" class="form-label">Primer apellido <span class="req" aria-hidden="true">*</span></label>
+                        <input  type="text" class="form-control-lg form-control" id="apellido1" name="apellido1"
+                                autocomplete="family-name" required>
+                      </div>
+                      <div class="col-12 col-md-6 mb-4">
+                        <label for="apellido2" class="form-label">Segundo apellido <samp class="req" aria-hidden="true">*</samp></label>
+                        <input type="text" class="form-control form-control-lg" id="apellido2" name="apellido2"
+                                            autocomplete="additional-name">
+                      </div>
+                    </div>
+
+                    <fieldset class="mb-3" id="grupo-nacimiento">
+                      <legend class="form-label">Fecha de nacimiento <span class="req" aria-hidden="true">*</span></legend>
+                      <p class="form-text mt-0 mb-2" id="nacimiento-help">Selecciona día, mes y año de nacimiento</p>
+                      <div class="row g-2">
+                    <!--=====DIA=======-->
+                      <div class="col-4 col-sm-3">
+                        <label for="dia" class="form-label fs-6">Día</label>
+                        <select  class="form-select form-select-lg" name="dia" id="dia" autocomplete="bday-day"
+                        aria-describedby="nacimiento-help" required></select>
+                      </div> 
+                    <!--=====MES=======-->
+                      <div class="col-8 col-sm-5">
+                        <label for="mes" class="form-label fs-6">Mes</label>
+                        <select  class="form-select form-select-lg" name="mes" id="mes" autocomplete="bday-month"
+                        aria-describedby="nacimiento-help" required></select>
+                      </div>
+                      <!--=====AÑO=======-->
+                      <div class="col-8 col-sm-4">
+                        <label for="anio" class="form-label fs-6">Año</label>
+                        <select  class="form-select form-select-lg" name="anio" id="anio" autocomplete="bday-year"
+                        aria-describedby="nacimiento-help" required></select>
+                      </div>
+                      </div>
+                      <!-- ARREGLO 3 FIN: cierra aquí el <div class="row g-2"> -->
+                      <p class="field-error" id="err-nacimiento" hidden></p>
+                    </fieldset>
+                    <!--=======Estado civil=========-->
+                    <fieldset class="mb-4" id="grupo-estadocivil">
+                      <legend class="form-label">Estado civil <span class="req" aria-hidden="true">*</span></legend>
+                      <div class="row">
+                        <div class="col-12 col-sm-6">
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" name="estadocivil" id="ec-soltero" value="Soltero/a" required>
+                            <label for="ec-soltero">Soltero/a</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" name="estadocivil" id="ec-casado" value="Casado/a" required>
+                            <label for="ec-casado">Casado/a</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" name="estadocivil" id="ec-divorciado" value="Divorciado/a" required>
+                            <label for="ec-divorciado">Divorciado/a</label>
+                          </div>
+                            <div class="form-check">
+                            <input type="radio" class="form-check-input" name="estadocivil" id="ec-viudo" value="Viudo/a" required>
+                            <label for="ec-viudo">Viudo/a</label>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="field-error" id="err-estadocivil" hidden></p>
+                    </fieldset> 
+                    <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-primary btn-lg px-4" data-next>Continuar</button>
+                    </div>
+                  </section>
+                  <section id="paso-2" aria-labelledby="paso-2-titulo"><h2 id="paso-2-titulo">Paso 2 · Cita y especialidad</h2></section>
+                  <section id="paso-3" aria-labelledby="paso-3-titulo"><h2 id="paso-3-titulo">Paso 3 · Confirmación</h2></section>
+                </form>
+              </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </main>
+        <footer class="py-4 mt-5 border-top">
+          <div class="container">
+            <p class="mb-1 fw-semibold">Sede 2.0 Servicio de salud</p>
+            <p class="mb-0 text-secondary">Teléfono de atención: 900 000 000</p>
+          </div>
+        </footer>
+  </body>
+</html>

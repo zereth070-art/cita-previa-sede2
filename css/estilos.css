@@ -1,0 +1,63 @@
+:root 
+{
+    --sede-azul :#0b4f9c;
+    --sede-azul-oscuro :#083a73;
+    --sede-texto :#1f2d3a;
+    --sede-fondo :#f4f6f9;
+    --sede-borde :#c9d3df; 
+    --sede-error: #a3172b;
+}
+
+html 
+{
+    font-size: 112.5%;
+}
+
+body 
+{
+    background-color: var(--sede-fondo);
+    color: var(--sede-texto);
+}
+
+.cabecera
+{
+    background-color: var(--sede-azul-oscuro);
+} 
+/*solo el navbar de la cabecera, el resto los dejo en paz*/
+.cabecera .navbar-brand 
+{
+    font-size: 1.15rem;
+    line-height: 1.3;
+}
+
+.brand-sub
+{
+    display: block; /*lo obligo a bajar a la siguiente linea*/
+    font-size: 0.85rem;
+    font-weight: 400; /*quito la negrita del padre*/
+    opacity: 0.9; /*aligero un poco el blanco*/
+}
+
+/* ARREGLO 3: pega aquí el bloque legend.form-label (float: none; width: auto; font-size: 1.05rem) */
+
+.req 
+{
+    color: var(--sede-error); font-weight: 700;
+}
+
+.form-label { font-weight: 600;}
+
+.form-text { font-size: 1rem; color: #4a5a6a;}
+
+.field-error {
+  color: var(--sede-error);
+  font-weight: 600;
+  margin: 0.4rem 0 0;
+}
+legend.form-label {
+  float: none;
+  width: auto;
+  padding: 0;
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}

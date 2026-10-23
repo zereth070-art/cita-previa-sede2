@@ -1,0 +1,191 @@
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Sede Electrónica - Cita Previa Sanitaria V.1.0.4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="header">
+      <marquee>
+        BIENVENIDO AL SISTEMA DE ASIGNACIÓN DE CITAS MÉDICAS. HORARIO DE
+        SERVIDOR: 12:45
+      </marquee>
+    </div>
+
+    <br />
+
+    <center>
+      <table class="tabla-principal" cellspacing="0" cellpadding="8">
+        <tbody>
+          <tr>
+            <td colspan="2" bgcolor="#c0c0c0">
+              <b
+                ><font size="3"
+                  >FORMULARIO ÚNICO DE SOLICITUD DE CITA. RELLENE TODOS LOS
+                  CAMPOS.</font
+                ></b
+              >
+            </td>
+          </tr>
+
+          <!-- DATOS PERSONALES -->
+          <tr>
+            <td class="td-label">Documento Nacional de Identidad:</td>
+            <td class="td-input"><input type="text" name="dni" size="15" /></td>
+          </tr>
+          <tr>
+            <td class="td-label">Nombre del Paciente:</td>
+            <td class="td-input">
+              <input type="text" name="nombre" size="30" />
+            </td>
+          </tr>
+          <tr>
+            <td class="td-label">Primer Apellido:</td>
+            <td class="td-input">
+              <input type="text" name="ape1" size="20" />
+            </td>
+          </tr>
+          <tr>
+            <td class="td-label">Segundo Apellido:</td>
+            <td class="td-input">
+              <input type="text" name="ape2" size="20" />
+            </td>
+          </tr>
+          <tr>
+            <td class="td-label">Fecha de Nacimiento (DD/MM/AAAA):</td>
+            <td class="td-input">
+              Día:
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>...</option>
+              </select>
+              Mes:
+              <select>
+                <option>Enero</option>
+                <option>Febrero</option>
+              </select>
+              Año: <input type="text" size="4" />
+            </td>
+          </tr>
+          <tr>
+            <td class="td-label">Estado Civil:</td>
+            <td class="td-input">
+              <input type="radio" name="estcivil" value="s" /> Soltero/a
+              <input type="radio" name="estcivil" value="c" /> Casado/a
+              <input type="radio" name="estcivil" value="d" /> Divorciado/a
+              <input type="radio" name="estcivil" value="v" /> Viudo/a
+            </td>
+          </tr>
+
+          <!-- DATOS SANITARIOS -->
+          <tr>
+            <td colspan="2"><hr /></td>
+          </tr>
+          <tr>
+            <td class="td-label">
+              Código e-SIP: <br /><span class="help-text"
+                >El código de validación alfanumérico e-SIP debe coincidir con
+                el registro analógico del reverso anterior.</span
+              >
+            </td>
+            <td class="td-input"><input type="text" name="sip" size="20" /></td>
+          </tr>
+          <tr>
+            <td class="td-label">Especialidad Requerida:</td>
+            <td class="td-input">
+              <select name="especialidad">
+                <option value="0">
+                  --- SELECCIONE UNA OPCIÓN VÁLIDA DEL LISTADO ---
+                </option>
+                <option value="1">Medicina Familiar y Comunitaria</option>
+                <option value="2">Pediatría</option>
+                <option value="3">Enfermería General</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="td-label">
+              Médico Asignado (Deje en blanco si no lo sabe):
+            </td>
+            <td class="td-input">
+              <input type="text" name="medico" size="40" />
+            </td>
+          </tr>
+
+          <!-- FECHAS Y HORARIOS -->
+          <tr>
+            <td colspan="2"><hr /></td>
+          </tr>
+          <tr>
+            <td class="td-label">Fecha Preferida para la Cita:</td>
+            <td class="td-input">
+              <input
+                type="text"
+                name="fechacita"
+                size="10"
+                value="DD-MM-AAAA"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="td-label">Franja Horaria Deseada:</td>
+            <td class="td-input">
+              <input type="checkbox" name="h1" /> 08:00 - 10:00
+              <input type="checkbox" name="h2" /> 10:00 - 12:00<br />
+              <input type="checkbox" name="h3" /> 12:00 - 14:00
+              <input type="checkbox" name="h4" /> 16:00 - 18:00
+            </td>
+          </tr>
+          <tr>
+            <td class="td-label">Motivo de la consulta (Sea muy breve):</td>
+            <td class="td-input"><textarea rows="4" cols="50"></textarea></td>
+          </tr>
+          <tr>
+            <td class="td-label">Nivel de Urgencia (Subjetivo):</td>
+            <td class="td-input">
+              <input type="radio" name="urg" value="1" /> Bajo
+              <input type="radio" name="urg" value="2" /> Medio
+              <input type="radio" name="urg" value="3" /> Alto
+            </td>
+          </tr>
+
+          <!-- LEGAL Y ENVÍO -->
+          <tr>
+            <td colspan="2"><hr /></td>
+          </tr>
+          <tr>
+            <td class="td-label">Consentimiento LOPD 15/1999:</td>
+            <td class="td-input">
+              <input type="checkbox" /> Acepto la cesión de datos a ficheros de
+              titularidad pública según el artículo 5.
+            </td>
+          </tr>
+          <tr>
+            <td class="td-label">Deseo recibir publicidad institucional:</td>
+            <td class="td-input">
+              <input type="checkbox" /> Sí (Marque para no recibir, desmarque
+              para recibir).
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center" bgcolor="#c0c0c0">
+              <br />
+              <input
+                type="button"
+                value="PROCESAR FORMULARIO EN SERVIDOR"
+                onclick="
+                  alert(
+                    'Error de conexión con el Mainframe. Vuelva a intentarlo.',
+                  )
+                "
+              />
+              <input type="reset" value="BORRAR TODO" />
+              <br /><br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  </body>
+</html>
