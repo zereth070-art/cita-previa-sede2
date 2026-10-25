@@ -32,12 +32,12 @@
                 <p class="fs-5 text-secondary mb-4">Completa los 3 pasos</p>
               <nav aria-label="lista-pasos">
               <ol class="lista-pasos">
-                <li>Itentificación</li>
+                <li>Identificación</li>
                 <li>Cita y especialidad</li>
                 <li>Confirmación</li>
               </ol>
             </nav>
-            <div class="card shadow-sw">
+            <div class="card shadow-sm">
               <div class="card-body p-4 p-md-5">
                 <form>
                   <section id="paso-1" aria-labelledby="paso-1-titulo">
@@ -56,7 +56,7 @@
 
                     <div class="row">
                       <div class="col-12 col-md-6 mb-4">
-                        <label for="nombre" class="form-label">Nombre <samp class="req" aria-hidden="true">*</samp></label>
+                        <label for="nombre" class="form-label">Nombre <span class="req" aria-hidden="true">*</span></label>
                         <input type="text" class="form-control form-control-lg" id="nombre" name="nombre"
                         autocomplete="given-name" required>
                       </div>
@@ -66,7 +66,7 @@
                                 autocomplete="family-name" required>
                       </div>
                       <div class="col-12 col-md-6 mb-4">
-                        <label for="apellido2" class="form-label">Segundo apellido <samp class="req" aria-hidden="true">*</samp></label>
+                        <label for="apellido2" class="form-label">Segundo apellido <span class="req" aria-hidden="true">*</span></label>
                         <input type="text" class="form-control form-control-lg" id="apellido2" name="apellido2"
                                             autocomplete="additional-name">
                       </div>
@@ -95,7 +95,6 @@
                         aria-describedby="nacimiento-help" required></select>
                       </div>
                       </div>
-                      <!-- ARREGLO 3 FIN: cierra aquí el <div class="row g-2"> -->
                       <p class="field-error" id="err-nacimiento" hidden></p>
                     </fieldset>
                     <!--=======Estado civil=========-->

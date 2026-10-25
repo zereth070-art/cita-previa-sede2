@@ -38,8 +38,6 @@ body
     opacity: 0.9; /*aligero un poco el blanco*/
 }
 
-/* ARREGLO 3: pega aquí el bloque legend.form-label (float: none; width: auto; font-size: 1.05rem) */
-
 .req 
 {
     color: var(--sede-error); font-weight: 700;
