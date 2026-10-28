@@ -38,8 +38,6 @@ body
     opacity: 0.9; /*aligero un poco el blanco*/
 }
 
-/* ARREGLO 3: pega aquí el bloque legend.form-label (float: none; width: auto; font-size: 1.05rem) */
-
 .req 
 {
     color: var(--sede-error); font-weight: 700;
@@ -60,4 +58,28 @@ legend.form-label {
   padding: 0;
   font-size: 1.05rem;
   margin-bottom: 0.4rem;
+}
+
+/* Indicador de pasos. Los números salen de un contador CSS, no del HTML*/
+.lista-pasos{
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    counter-reset: paso;
+}
+.lista-pasos li {
+    flex: 1;
+    counter-increment: paso;
+    padding: 0.6rem 0.25rem;
+    border-bottom: 4px solid var(--sede-borde);
+    font-size: 0.9rem;
+    color: #4a5a6a;
+}
+.lista-pasos li::before {content: counter(paso) ". ";}
+.lista-pasos li.activo{
+    border-bottom-color:var(--sede-azul);
+    color: var(--sede-azul-oscuro);
+    font-weight: 700;
 }
